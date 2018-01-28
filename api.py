@@ -7,7 +7,7 @@ def setup_router(self):
     self.router.add_get('/', handle)
     self.router.add_get('/tasks', views.task_list)
 
-# handle
+
 async def handle(request):
     response_obj = {'status': 'success'}
     return web.Response(text=json.dumps(response_obj))
