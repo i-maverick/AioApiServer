@@ -9,8 +9,10 @@ db = peewee.SqliteDatabase('peewee.db')
 
 def setup_router(self):
     self.router.add_get('/', handle)
-    self.router.add_get('/tasks', views.task_list)
-    self.router.add_get('/tasks/{id}', views.task)
+    self.router.add_get('/task/', views.task)
+    self.router.add_get('/tasks/', views.task_list)
+    self.router.add_get('/cards/', views.card_list)
+    self.router.add_get('/card?id={id}', views.card)
 
 
 async def handle(request):
